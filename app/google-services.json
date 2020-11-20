@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "168483153077",
+    "firebase_url": "https://galaxy-shooting-7af04.firebaseio.com",
+    "project_id": "galaxy-shooting-7af04",
+    "storage_bucket": "galaxy-shooting-7af04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168483153077:android:d9b8819d1bfb202f198afc",
+        "android_client_info": {
+          "package_name": "com.rashadtanjim.galaxyshooting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168483153077-0gap26t0gii3251qo09ehp1ekp7bcol3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rashadtanjim.galaxyshooting",
+            "certificate_hash": "a70bb2bb5a463ffe6cf7124a967a38ad49ffe985"
+          }
+        },
+        {
+          "client_id": "168483153077-q1167s0226ouj8fgv31uu4t43mhbk2g2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOZThW7xNzE7RO023hjaSg4L5YTV0Yn60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168483153077-q1167s0226ouj8fgv31uu4t43mhbk2g2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
