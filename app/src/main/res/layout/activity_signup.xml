@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@color/bg_login"
-            android:text="@string/action_sign_in_short"
+            android:text="@string/btn_signup"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
         <Button

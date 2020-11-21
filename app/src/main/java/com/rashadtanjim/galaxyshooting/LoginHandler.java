@@ -43,7 +43,7 @@ public class LoginHandler extends AppCompatActivity {
             finish();
         }
         // set the view now
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_login_handler);
 
 
         inputEmail = (EditText) findViewById(R.id.email);
