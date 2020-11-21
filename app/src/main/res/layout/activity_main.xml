@@ -4,32 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_canvas"
     tools:context=".MainActivity">
 
 
     <EditText
         android:id="@+id/pressText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="304dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="224dp"
         android:layout_marginEnd="8dp"
+        android:background="@color/bg_login"
         android:ems="10"
-        android:hint="Enter your Email Here"
+        android:hint="  Enter Your Name"
         android:inputType="textEmailAddress"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <Button
         android:id="@+id/buttonPressed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="308dp"
-        android:text="Press"
+        android:layout_width="251dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="428dp"
+        android:background="@color/bg_login"
+        android:text="Play Galaxy Shooting Game"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

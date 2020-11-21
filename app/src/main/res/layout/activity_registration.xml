@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_register"
     android:orientation="vertical"
+    android:background="@drawable/bg_canvas"
     android:fitsSystemWindows="true">
 
     <LinearLayout
@@ -19,8 +19,8 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="205dp"
-            app:srcCompat="@drawable/ic_launcher_foreground" />
+            android:layout_height="202dp"
+            app:srcCompat="@drawable/bplanet1" />
 
         <Button
             android:id="@+id/reg_login"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:background="@color/apptool"
+            android:background="@color/bg_login"
             android:onClick="onlogin"
             android:text="@string/btn_login" />
 
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:background="@color/apptool"
+            android:background="@color/bg_login"
             android:onClick="onsignup"
             android:text="@string/btn_signup" />
 
