@@ -13,11 +13,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    private EditText editText;
+    public Button pressButton, showScoreButton;
+
+
     // Write a message to the database
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("users");
-    private EditText editText;
-    private Button pressButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,17 +28,24 @@ public class MainActivity extends AppCompatActivity {
 
         editText = findViewById(R.id.pressText);
         pressButton = findViewById(R.id.buttonPressed);
+        showScoreButton = findViewById(R.id.buttonScored);
 
         pressButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressed();
+                buttonPressed();
                 playGame();
+            }
+        });
+        showScoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showGameScore();
             }
         });
     }
 
-    private void pressed() {
+    private void buttonPressed() {
         myRef.child("Name").
                 setValue(editText.getText().toString());
     }
@@ -46,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
+    public void showGameScore() {
+//        Intent intent = new Intent(this, GamePlayActivity.class);
+//        startActivity(intent);
+//        finish();
+    }
 
 }
