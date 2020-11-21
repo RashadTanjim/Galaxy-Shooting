@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private Button btnChangeEmail, btnChangePassword, btnSendResetEmail, btnRemoveUser,
+    private Button buttonChangeEmail, buttonChangePassword, buttonSendResetEmail, buttonRemoveUser,
             changeEmail, changePassword, sendEmail, remove, signOut;
 
     private EditText oldEmail, newEmail, password, newPassword;
@@ -57,10 +57,10 @@ public class LoginActivity extends AppCompatActivity {
             }
         };
 
-        btnChangeEmail = (Button) findViewById(R.id.change_email_button);
-        btnChangePassword = (Button) findViewById(R.id.change_password_button);
-        btnSendResetEmail = (Button) findViewById(R.id.sending_pass_reset_button);
-        btnRemoveUser = (Button) findViewById(R.id.remove_user_button);
+        buttonChangeEmail = (Button) findViewById(R.id.change_email_button);
+        buttonChangePassword = (Button) findViewById(R.id.change_password_button);
+        buttonSendResetEmail = (Button) findViewById(R.id.sending_pass_reset_button);
+        buttonRemoveUser = (Button) findViewById(R.id.remove_user_button);
         changeEmail = (Button) findViewById(R.id.changeEmail);
         changePassword = (Button) findViewById(R.id.changePass);
         sendEmail = (Button) findViewById(R.id.send);
@@ -87,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
             progressBar.setVisibility(View.GONE);
         }
 
-        btnChangeEmail.setOnClickListener(new View.OnClickListener() {
+        buttonChangeEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 oldEmail.setVisibility(View.GONE);
@@ -127,7 +127,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        btnChangePassword.setOnClickListener(new View.OnClickListener() {
+        buttonChangePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 oldEmail.setVisibility(View.GONE);
@@ -172,7 +172,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        btnSendResetEmail.setOnClickListener(new View.OnClickListener() {
+        buttonSendResetEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 oldEmail.setVisibility(View.VISIBLE);
@@ -211,7 +211,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        btnRemoveUser.setOnClickListener(new View.OnClickListener() {
+        buttonRemoveUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 progressBar.setVisibility(View.VISIBLE);

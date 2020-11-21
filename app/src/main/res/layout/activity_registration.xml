@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:background="@color/bg_login"
+            android:background="@color/colorSecondary"
             android:onClick="onlogin"
             android:text="@string/btn_login" />
 
@@ -38,8 +38,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:background="@color/bg_login"
-            android:onClick="onsignup"
+            android:background="@color/colorSecondary"
+            android:onClick="onSignUp"
             android:text="@string/btn_signup" />
 
 

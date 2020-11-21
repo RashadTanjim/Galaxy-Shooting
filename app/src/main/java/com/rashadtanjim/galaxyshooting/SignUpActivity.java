@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class SignUpActivity extends AppCompatActivity {
 
     private EditText inputEmail, inputPassword;
-    private Button btnSignIn, btnSignUp, btnResetPassword, changeInfo;
+    private Button buttonSignIn, buttonSignUp, buttonResetPassword, changeInfo;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
 
@@ -31,12 +31,12 @@ public class SignUpActivity extends AppCompatActivity {
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
 
-        btnSignIn = (Button) findViewById(R.id.sign_in_button);
-        btnSignUp = (Button) findViewById(R.id.sign_up_button);
+        buttonSignIn = (Button) findViewById(R.id.sign_in_button);
+        buttonSignUp = (Button) findViewById(R.id.sign_up_button);
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        btnResetPassword = (Button) findViewById(R.id.btn_reset_password);
+        buttonResetPassword = (Button) findViewById(R.id.btn_reset_password);
         changeInfo = (Button) findViewById(R.id.Change_info);
 
         changeInfo.setOnClickListener(new View.OnClickListener() {
@@ -46,14 +46,14 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
-        btnResetPassword.setOnClickListener(new View.OnClickListener() {
+        buttonResetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(SignUpActivity.this, ResetPassword.class));
             }
         });
 
-        btnSignIn.setOnClickListener(new View.OnClickListener() {
+        buttonSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -62,7 +62,7 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
-        btnSignUp.setOnClickListener(new View.OnClickListener() {
+        buttonSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

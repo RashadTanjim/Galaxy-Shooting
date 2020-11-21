@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@color/bg_login"
+            android:background="@color/colorSecondary"
             android:text="@string/btn_signup"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
@@ -75,7 +75,7 @@
             android:layout_marginTop="20dip"
             android:text="@string/Change_info"
             android:textAllCaps="false"
-            android:background="@color/bg_login"
+            android:background="@color/colorSecondary"
             android:textColor="@android:color/black"
             android:textSize="15dp" />
 
@@ -99,7 +99,7 @@
             android:background="@null"
             android:text="@string/btn_link_to_login"
             android:textAllCaps="false"
-            android:textColor="@color/bg_login"
+            android:textColor="@color/colorSecondary"
             android:textSize="15dp" />
     </LinearLayout>
 

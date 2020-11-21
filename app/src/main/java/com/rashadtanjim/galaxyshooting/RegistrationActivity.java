@@ -1,25 +1,27 @@
 package com.rashadtanjim.galaxyshooting;
 
-        import android.content.Intent;
-        import android.os.Bundle;
-        import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.os.Bundle;
 
-        import android.view.View;
-        import android.widget.Button;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.view.View;
+import android.widget.Button;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-    public void onsignup(View view) {
-        Button signup = (Button) findViewById(R.id.reg_signup);
+    public void onSignUp(View view) {
+        Button signUp = (Button) findViewById(R.id.reg_signup);
 
-        Intent regsignup = new Intent(RegistrationActivity.this, SignUpActivity.class);
-        startActivity(regsignup);
+        Intent regSignUp = new Intent(RegistrationActivity.this, SignUpActivity.class);
+        startActivity(regSignUp);
         finish();
     }
+
     public void onlogin(View view) {
         Button login = (Button) findViewById(R.id.reg_login);
-        Intent reglogin = new Intent(RegistrationActivity.this, LoginHandler.class);
-        startActivity(reglogin);
+        Intent regLogin = new Intent(RegistrationActivity.this, LoginHandler.class);
+        startActivity(regLogin);
         finish();
     }
 
@@ -29,7 +31,6 @@ public class RegistrationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
     }
-
 
 
 }
