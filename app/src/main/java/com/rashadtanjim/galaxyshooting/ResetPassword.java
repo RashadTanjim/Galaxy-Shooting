@@ -14,7 +14,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class Reset_password extends AppCompatActivity {
+public class ResetPassword extends AppCompatActivity {
 
     private EditText inputEmail;
     private Button btnReset, btnBack;
@@ -57,9 +57,9 @@ public class Reset_password extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(Reset_password.this, "We have sent you instructions to reset your password!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ResetPassword.this, "We have sent you instructions to reset your password!", Toast.LENGTH_SHORT).show();
                                 } else {
-                                    Toast.makeText(Reset_password.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ResetPassword.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
                                 }
 
                                 progressBar.setVisibility(View.GONE);

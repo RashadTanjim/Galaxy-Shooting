@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".Login">
+    tools:context=".LoginHandler">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -89,7 +89,7 @@
             android:textAllCaps="false"
             android:textColor="@color/black" />
 
-        <!-- Link to Login Screen -->
+        <!-- Link to LoginHandler Screen -->
 
         <Button
             android:id="@+id/sign_in_button"

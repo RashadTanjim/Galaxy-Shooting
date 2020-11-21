@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.rashadtanjim.galaxyshooting.Login">
+    tools:context="com.rashadtanjim.galaxyshooting.LoginHandler">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -53,7 +53,7 @@
                 android:textColorHint="@android:color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Login Button -->
+        <!-- LoginHandler Button -->
 
         <Button
             android:id="@+id/btn_login"
@@ -74,7 +74,7 @@
             android:textAllCaps="false"
             android:textColor="@color/colorAccent" />
 
-        <!-- Link to Login Screen -->
+        <!-- Link to LoginHandler Screen -->
 
         <Button
             android:id="@+id/btn_signup"

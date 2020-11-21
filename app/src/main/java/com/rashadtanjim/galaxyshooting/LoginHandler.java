@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.text.TextUtils;
 import android.view.View;
@@ -22,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Login extends AppCompatActivity {
+public class LoginHandler extends AppCompatActivity {
 
     private EditText inputEmail, inputPassword;
     private FirebaseAuth auth;
@@ -40,7 +39,7 @@ public class Login extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         if (auth.getCurrentUser() != null) {
-            startActivity(new Intent(Login.this, MainActivity.class));
+            startActivity(new Intent(LoginHandler.this, MainActivity.class));
             finish();
         }
         // set the view now
@@ -60,14 +59,14 @@ public class Login extends AppCompatActivity {
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Login.this, Signup.class));
+                startActivity(new Intent(LoginHandler.this, SignUpActivity.class));
             }
         });
 
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Login.this, Reset_password.class));
+                startActivity(new Intent(LoginHandler.this, ResetPassword.class));
             }
         });
 
@@ -92,7 +91,7 @@ public class Login extends AppCompatActivity {
 
                 //authenticate user
                 auth.signInWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
+                        .addOnCompleteListener(LoginHandler.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 // If sign in fails, display a message to the user. If sign in succeeds
@@ -104,13 +103,13 @@ public class Login extends AppCompatActivity {
                                     if (password.length() < 6) {
                                         inputPassword.setError(getString(R.string.minimum_password));
                                     } else {
-                                        Toast.makeText(Login.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
+                                        Toast.makeText(LoginHandler.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
                                     }
                                 } else {
                                     rootNode = FirebaseDatabase.getInstance();
                                     reference = rootNode.getReference("users");
                                     reference.setValue("Arnob");
-                                    Intent intent = new Intent(Login.this, MainActivity.class);
+                                    Intent intent = new Intent(LoginHandler.this, MainActivity.class);
                                     startActivity(intent);
 
                                     finish();

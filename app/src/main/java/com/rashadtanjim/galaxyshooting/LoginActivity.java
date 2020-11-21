@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Login_main extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private Button btnChangeEmail, btnChangePassword, btnSendResetEmail, btnRemoveUser,
             changeEmail, changePassword, sendEmail, remove, signOut;
@@ -51,7 +51,7 @@ public class Login_main extends AppCompatActivity {
                 if (user == null) {
                     // user auth state is changed - user is null
                     // launch login activity
-                    startActivity(new Intent(Login_main.this, Login.class));
+                    startActivity(new Intent(LoginActivity.this, LoginHandler.class));
                     finish();
                 }
             }
@@ -111,11 +111,11 @@ public class Login_main extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(Login_main.this, "Email address is updated. Please sign in with new email id!", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(LoginActivity.this, "Email address is updated. Please sign in with new email id!", Toast.LENGTH_LONG).show();
                                         signOut();
                                         progressBar.setVisibility(View.GONE);
                                     } else {
-                                        Toast.makeText(Login_main.this, "Failed to update email!", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(LoginActivity.this, "Failed to update email!", Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
                                     }
                                 }
@@ -155,11 +155,11 @@ public class Login_main extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()) {
-                                            Toast.makeText(Login_main.this, "Password is updated, sign in with new password!", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(LoginActivity.this, "Password is updated, sign in with new password!", Toast.LENGTH_SHORT).show();
                                             signOut();
                                             progressBar.setVisibility(View.GONE);
                                         } else {
-                                            Toast.makeText(Login_main.this, "Failed to update password!", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(LoginActivity.this, "Failed to update password!", Toast.LENGTH_SHORT).show();
                                             progressBar.setVisibility(View.GONE);
                                         }
                                     }
@@ -196,10 +196,10 @@ public class Login_main extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(Login_main.this, "Reset password email is sent!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(LoginActivity.this, "Reset password email is sent!", Toast.LENGTH_SHORT).show();
                                         progressBar.setVisibility(View.GONE);
                                     } else {
-                                        Toast.makeText(Login_main.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(LoginActivity.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
                                         progressBar.setVisibility(View.GONE);
                                     }
                                 }
@@ -221,12 +221,12 @@ public class Login_main extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(Login_main.this, "Your profile is deleted:( Create a account now!", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(Login_main.this, Signup.class));
+                                        Toast.makeText(LoginActivity.this, "Your profile is deleted:( Create a account now!", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
                                         finish();
                                         progressBar.setVisibility(View.GONE);
                                     } else {
-                                        Toast.makeText(Login_main.this, "Failed to delete your account!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(LoginActivity.this, "Failed to delete your account!", Toast.LENGTH_SHORT).show();
                                         progressBar.setVisibility(View.GONE);
                                     }
                                 }

@@ -28,24 +28,24 @@
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Login"
+            android:name=".LoginHandler"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Login_main"
+            android:name=".LoginActivity"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Signup"
+            android:name=".SignUpActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Registration"
+            android:name=".RegistrationActivity"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
 
         <activity
-            android:name=".Reset_password"
+            android:name=".ResetPassword"
             android:label="@string/title_activity_reset_password"
             android:theme="@style/AppTheme.NoActionBar" />
 
