@@ -28,14 +28,14 @@
         android:text="Play"
         android:textSize="64sp"
         android:layout_centerInParent="true"
-        android:textColor="#000000"
+        android:textColor="#ffafaa"
         android:id="@+id/play"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:text="High Score"
         android:id="@+id/highScoreTxt"
         android:layout_margin="16dp"

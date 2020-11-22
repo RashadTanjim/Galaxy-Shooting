@@ -13,20 +13,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+
     public Button pressButton, showScoreButton;
     // Write a message to the database
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("users");
-    private EditText editText;
+    public EditText editText;
+
+    DataHolder dataHolder = new DataHolder();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editText = findViewById(R.id.pressText);
+        editText = (EditText) findViewById(R.id.pressText);
         pressButton = findViewById(R.id.buttonPressed);
         showScoreButton = findViewById(R.id.buttonScored);
+        dataHolder.setName(editText.getText().toString());
 
         pressButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void buttonPressed() {
-        myRef.child("Name").
-                setValue(editText.getText().toString());
+//        myRef.setValue(dataHolder);
     }
 
     public void playGame() {

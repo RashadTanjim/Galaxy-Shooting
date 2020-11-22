@@ -8,9 +8,18 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class GameUI extends AppCompatActivity {
+
+    DataHolder dataHolder = new DataHolder();
+
+    // Write a message to the database
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("users");
 
     private boolean isMute;
 
@@ -34,6 +43,8 @@ public class GameUI extends AppCompatActivity {
 
         final SharedPreferences prefs = getSharedPreferences("game", MODE_PRIVATE);
         highScoreTxt.setText("HighScore: " + prefs.getInt("highscore", 0));
+        myRef.child(dataHolder.getName()).
+                setValue("HighScore: " + prefs.getInt("highscore", 0));
 
         isMute = prefs.getBoolean("isMute", false);
 
