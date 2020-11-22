@@ -13,13 +13,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText editText;
     public Button pressButton, showScoreButton;
-
-
     // Write a message to the database
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("users");
+    private EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,14 +49,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playGame() {
-        Intent intent = new Intent(this, GamePlayActivity.class);
+        Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
-        finish();
     }
+
     public void showGameScore() {
-//        Intent intent = new Intent(this, GamePlayActivity.class);
-//        startActivity(intent);
-//        finish();
+        Intent intent = new Intent(this, ScoreActivity.class);
+        startActivity(intent);
     }
 
 }
