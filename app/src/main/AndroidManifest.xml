@@ -12,10 +12,7 @@
         android:roundIcon="@drawable/bplanet1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <!-- <activity -->
-        <!-- android:name=".ui.login.LoginActivity" -->
-        <!-- android:label="@string/title_activity_login" > -->
-        <!-- </activity> -->
+
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -49,6 +46,13 @@
         <activity
             android:name=".ScoreActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GameUI"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".GameActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
