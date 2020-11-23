@@ -30,5 +30,5 @@
     <string name="lbl_forgot_password">Forgot password?</string>
     <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
     <string name="Change_info">Change Your Personal Info</string>
-    <string name="game_rules">Rules: If ou miss 5 planets to blast, the game will over. If you got hit with any planet, the game will over. Happy Playing!</string>
+    <string name="game_rules">Rules: If you miss 5 planets to blast, the game will over. If you got hit with any planet, the game will over. Happy Playing!</string>
 </resources>
