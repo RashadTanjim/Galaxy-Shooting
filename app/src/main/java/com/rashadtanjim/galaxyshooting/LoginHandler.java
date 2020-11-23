@@ -23,13 +23,12 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginHandler extends AppCompatActivity {
 
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
     private EditText inputEmail, inputPassword;
     private FirebaseAuth auth;
     private ProgressBar progressBar;
     private Button buttonSignup, buttonLogin, buttonReset;
-
-    FirebaseDatabase rootNode;
-    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,10 +107,9 @@ public class LoginHandler extends AppCompatActivity {
                                 } else {
                                     rootNode = FirebaseDatabase.getInstance();
                                     reference = rootNode.getReference("users");
-                                    reference.setValue("Arnob");
+                                    reference.setValue("users");
                                     Intent intent = new Intent(LoginHandler.this, MainActivity.class);
                                     startActivity(intent);
-
                                     finish();
                                 }
                             }

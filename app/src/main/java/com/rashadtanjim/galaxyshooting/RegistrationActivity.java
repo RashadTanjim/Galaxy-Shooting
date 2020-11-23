@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+// Registration activity after the splash screen
 public class RegistrationActivity extends AppCompatActivity {
 
     public void onSignUp(View view) {

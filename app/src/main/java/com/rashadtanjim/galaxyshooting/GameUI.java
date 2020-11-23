@@ -19,7 +19,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class GameUI extends AppCompatActivity {
 
     DataHolder dataHolder = new DataHolder();
-    private FirebaseAuth firebaseAuth;
     FirebaseUser user;
     String uid;
     String name = "";
@@ -28,9 +27,8 @@ public class GameUI extends AppCompatActivity {
     // Write a message to the database
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("users");
-
-
-    private boolean isMute;
+    private FirebaseAuth firebaseAuth;
+    private boolean isMute; // used for the game sound on/off
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +39,7 @@ public class GameUI extends AppCompatActivity {
 
         setContentView(R.layout.activity_game);
 
+        // getting data from firebase User ID and Logged Mail
         user = FirebaseAuth.getInstance().getCurrentUser();
         uid = user.getUid();
         name = dataHolder.getName();
@@ -59,7 +58,7 @@ public class GameUI extends AppCompatActivity {
         highScoreTxt.setText("HighScore: " + prefs.getInt("highscore", 0));
 
         myRef.child(uid).
-                setValue(mail + ": has Scored: " + prefs.getInt("highscore", 0));
+                setValue(mail + " has Scored: " + prefs.getInt("highscore", 0));
 
         isMute = prefs.getBoolean("isMute", false);
 

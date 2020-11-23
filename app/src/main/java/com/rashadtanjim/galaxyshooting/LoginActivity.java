@@ -2,6 +2,7 @@ package com.rashadtanjim.galaxyshooting;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -42,7 +43,6 @@ public class LoginActivity extends AppCompatActivity {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("message");
-        myRef.setValue("Hello, World!");
 
         authListener = new FirebaseAuth.AuthStateListener() {
             @Override

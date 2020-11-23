@@ -4,25 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     android:background="@drawable/bg_canvas"
+    android:fitsSystemWindows="true"
     tools:context=".LoginActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.Design.NoActionBar"
-        app:elevation="0dp"/>
+        app:elevation="0dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <EditText
@@ -121,9 +121,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"
             android:background="@color/bg_register"
             android:text="@string/change_email"
+            android:textColor="@android:color/white"
             android:textStyle="bold" />
 
         <Button
@@ -131,10 +131,10 @@
             style="?android:textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorSecondary"
-            android:textColor="@android:color/white"
             android:layout_marginTop="16dp"
+            android:background="@color/colorSecondary"
             android:text="@string/change_password"
+            android:textColor="@android:color/white"
             android:textStyle="bold" />
 
         <Button
@@ -152,10 +152,10 @@
             style="?android:textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/bg_register"
             android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"
+            android:background="@color/bg_register"
             android:text="@string/remove_user"
+            android:textColor="@android:color/white"
             android:textStyle="bold" />
 
         <Button

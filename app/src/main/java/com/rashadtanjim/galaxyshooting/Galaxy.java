@@ -39,6 +39,7 @@ public class Galaxy {
         y = -height;
     }
 
+    // using bit map to motion the different planet
     Bitmap getPlanet() {
 
         if (planetCounter == 1) {
@@ -61,7 +62,7 @@ public class Galaxy {
         return planet4;
     }
 
-    Rect getCollisionShape () {
+    Rect getCollisionShape() {
         return new Rect(x, y, x + width, y + height);
     }
 

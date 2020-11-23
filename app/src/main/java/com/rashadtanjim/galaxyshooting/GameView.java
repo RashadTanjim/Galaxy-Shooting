@@ -84,24 +84,18 @@ public class GameView extends SurfaceView implements Runnable {
 
             Galaxy galaxy = new Galaxy(getResources());
             galaxies[i] = galaxy;
-
         }
-
         random = new Random();
-
     }
 
     @Override
     public void run() {
 
         while (isPlaying) {
-
             update();
             draw();
             sleep();
-
         }
-
     }
 
     private void update() {
@@ -214,7 +208,7 @@ public class GameView extends SurfaceView implements Runnable {
                 return;
             }
 
-            canvas.drawBitmap(fireGun.getFlight(), fireGun.x, fireGun.y, paint);
+            canvas.drawBitmap(fireGun.getBullet(), fireGun.x, fireGun.y, paint);
 
             for (Bullet bullet : bullets)
                 canvas.drawBitmap(bullet.bullet, bullet.x, bullet.y, paint);
@@ -237,6 +231,7 @@ public class GameView extends SurfaceView implements Runnable {
 
     }
 
+    // checking if Highest score is less the previous the set it with the previous best
     private void saveIfHighScore() {
 
         if (prefs.getInt("highscore", 0) < score) {

@@ -35,23 +35,28 @@ public class ScoreActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.listView1);
         listView.setAdapter(arrayAdapter);
 
+        // Retrieving score form firebase and showing it using ListView
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                String value=dataSnapshot.getValue(String.class);
+                String value = dataSnapshot.getValue(String.class);
                 arrayList.add(value);
                 arrayAdapter.notifyDataSetChanged();
             }
+
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
                 arrayAdapter.notifyDataSetChanged();
             }
+
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
             }
+
             @Override
             public void onChildMoved(DataSnapshot dataSnapshot, String s) {
             }
+
             @Override
             public void onCancelled(DatabaseError databaseError) {
             }

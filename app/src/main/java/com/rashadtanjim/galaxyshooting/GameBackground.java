@@ -9,6 +9,7 @@ public class GameBackground {
     int x = 0, y = 0;
     Bitmap background;
 
+    // setting game background
     GameBackground(int screenX, int screenY, Resources res) {
 
         background = BitmapFactory.decodeResource(res, R.drawable.background);

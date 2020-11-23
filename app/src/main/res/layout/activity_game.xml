@@ -9,44 +9,44 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/background"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="48sp"
-        android:text="@string/galaxy_shooting"
-        android:textColor="#ffffff"
         android:layout_above="@id/play"
         android:layout_below="@id/highScoreTxt"
-        android:layout_centerHorizontal="true"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Play"
-        android:textSize="64sp"
-        android:layout_centerInParent="true"
-        android:textColor="#ffafaa"
-        android:id="@+id/play"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/galaxy_shooting"
         android:textColor="#ffffff"
-        android:text="High Score"
+        android:textSize="48sp" />
+
+    <TextView
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Play"
+        android:textColor="#ffafaa"
+        android:textSize="64sp" />
+
+    <TextView
         android:id="@+id/highScoreTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_margin="16dp"
-        android:layout_alignParentRight="true"/>
+        android:text="High Score"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
 
     <ImageView
+        android:id="@+id/volumeCtrl"
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
-        android:id="@+id/volumeCtrl"
-        android:src="@drawable/ic_volume_up_black_24dp"/>
+        android:src="@drawable/ic_volume_up_black_24dp" />
 
 </RelativeLayout>

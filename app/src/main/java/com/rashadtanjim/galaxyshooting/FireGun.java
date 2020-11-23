@@ -32,6 +32,7 @@ public class FireGun {
         width = (int) (width * screenRatioX);
         height = (int) (height * screenRatioY);
 
+        // setting values to different bit map to motion the game play
         gun1 = Bitmap.createScaledBitmap(gun1, width, height, false);
         gun2 = Bitmap.createScaledBitmap(gun2, width, height, false);
 
@@ -55,7 +56,7 @@ public class FireGun {
 
     }
 
-    Bitmap getFlight () {
+    Bitmap getBullet() {
 
         if (toShoot != 0) {
 
@@ -95,11 +96,11 @@ public class FireGun {
         return gun2;
     }
 
-    Rect getCollisionShape () {
+    Rect getCollisionShape() {
         return new Rect(x, y, x + width, y + height);
     }
 
-    Bitmap getDead () {
+    Bitmap getDead() {
         return dead;
     }
 

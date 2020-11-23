@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorSecondary"
-    android:textColor = "#ffffff"
+    android:textColor="#ffffff"
     tools:context=".ScoreActivity">
 
     <ListView
+        android:id="@+id/listView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="30dp"
         android:textColor="#ffffff"
-        android:textSize="24sp"
-        android:id="@+id/listView1"/>
+        android:textSize="24sp" />
 </RelativeLayout>

@@ -32,6 +32,7 @@ public class SplashScreen extends AppCompatActivity {
         // start thread
         background.start();
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

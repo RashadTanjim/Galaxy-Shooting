@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_canvas"
     android:fitsSystemWindows="true"
-    tools:context=".LoginHandler"
-    android:background="@drawable/bg_canvas">
+    tools:context=".LoginHandler">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -68,14 +68,15 @@
             android:text="@string/btn_signup"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
+
         <Button
             android:id="@+id/Change_info"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
+            android:background="@color/colorSecondary"
             android:text="@string/Change_info"
             android:textAllCaps="false"
-            android:background="@color/colorSecondary"
             android:textColor="@android:color/black"
             android:textSize="15dp" />
 
