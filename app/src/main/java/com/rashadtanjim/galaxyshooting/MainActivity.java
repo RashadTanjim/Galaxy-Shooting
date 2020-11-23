@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void playGame() {
         Intent intent = new Intent(this, GameActivity.class);
+//        intent.putExtra("name", editText.getText().toString());
         startActivity(intent);
     }
 

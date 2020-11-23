@@ -5,9 +5,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -16,10 +19,15 @@ import androidx.appcompat.app.AppCompatActivity;
 public class GameUI extends AppCompatActivity {
 
     DataHolder dataHolder = new DataHolder();
+    private FirebaseAuth firebaseAuth;
+    FirebaseUser user;
+    String uid;
+    String name = "";
 
     // Write a message to the database
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("users");
+
 
     private boolean isMute;
 
@@ -32,6 +40,10 @@ public class GameUI extends AppCompatActivity {
 
         setContentView(R.layout.activity_game);
 
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        uid = user.getUid();
+        name = dataHolder.getName();
+
         findViewById(R.id.play).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,7 +55,8 @@ public class GameUI extends AppCompatActivity {
 
         final SharedPreferences prefs = getSharedPreferences("game", MODE_PRIVATE);
         highScoreTxt.setText("HighScore: " + prefs.getInt("highscore", 0));
-        myRef.child(dataHolder.getName()).
+
+        myRef.child(uid).
                 setValue("HighScore: " + prefs.getInt("highscore", 0));
 
         isMute = prefs.getBoolean("isMute", false);
