@@ -7,23 +7,18 @@
     android:background="@drawable/bg_canvas"
     tools:context=".MainActivity">
 
-
-    <EditText
-        android:id="@+id/pressText"
-        android:layout_width="304dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="224dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/colorSecondary"
-        android:ems="10"
-        android:hint="  Enter Your Name"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/black"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="339dp"
+        android:layout_height="111dp"
+        android:layout_marginBottom="84dp"
+        android:text="@string/game_rules"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPressed"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/buttonPressed"
@@ -46,5 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,6 +23,7 @@ public class GameUI extends AppCompatActivity {
     FirebaseUser user;
     String uid;
     String name = "";
+    String mail;
 
     // Write a message to the database
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -43,6 +44,7 @@ public class GameUI extends AppCompatActivity {
         user = FirebaseAuth.getInstance().getCurrentUser();
         uid = user.getUid();
         name = dataHolder.getName();
+        mail = user.getEmail();
 
         findViewById(R.id.play).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +59,7 @@ public class GameUI extends AppCompatActivity {
         highScoreTxt.setText("HighScore: " + prefs.getInt("highscore", 0));
 
         myRef.child(uid).
-                setValue("HighScore: " + prefs.getInt("highscore", 0));
+                setValue(mail + ": has Scored: " + prefs.getInt("highscore", 0));
 
         isMute = prefs.getBoolean("isMute", false);
 

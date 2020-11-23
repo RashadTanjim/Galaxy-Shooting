@@ -18,24 +18,22 @@ public class MainActivity extends AppCompatActivity {
     // Write a message to the database
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("users");
-    public EditText editText;
+//    public EditText editText;
 
-    DataHolder dataHolder = new DataHolder();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editText = (EditText) findViewById(R.id.pressText);
+//        editText = (EditText) findViewById(R.id.pressText);
         pressButton = findViewById(R.id.buttonPressed);
         showScoreButton = findViewById(R.id.buttonScored);
-        dataHolder.setName(editText.getText().toString());
 
         pressButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buttonPressed();
+//              buttonPressed();
                 playGame();
             }
         });
@@ -47,9 +45,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void buttonPressed() {
-//        myRef.setValue(dataHolder);
-    }
+//    private void buttonPressed() {
+//    }
 
     public void playGame() {
         Intent intent = new Intent(this, GameActivity.class);
