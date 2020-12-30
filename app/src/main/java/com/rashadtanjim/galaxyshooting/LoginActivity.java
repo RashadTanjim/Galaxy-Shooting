@@ -44,18 +44,19 @@ public class LoginActivity extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("message");
 
-        authListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user == null) {
-                    // user auth state is changed - user is null
-                    // launch login activity
-                    startActivity(new Intent(LoginActivity.this, LoginHandler.class));
-                    finish();
-                }
-            }
-        };
+//We don't need this as user == null is always false since the user is already inside MainActivity
+//        authListener = new FirebaseAuth.AuthStateListener() {
+//            @Override
+//            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+//                FirebaseUser user = firebaseAuth.getCurrentUser();
+//                if (user == null) {
+//                    // user auth state is changed - user is null
+//                    // launch login activity
+//                    startActivity(new Intent(LoginActivity.this, LoginHandler.class));
+//                    finish();
+//                }
+//            }
+//        };
 
         buttonChangeEmail = (Button) findViewById(R.id.change_email_button);
         buttonChangePassword = (Button) findViewById(R.id.change_password_button);
@@ -247,6 +248,9 @@ public class LoginActivity extends AppCompatActivity {
     //sign out method
     public void signOut() {
         auth.signOut();
+        Intent intent = new Intent(this,RegistrationActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override
@@ -255,17 +259,29 @@ public class LoginActivity extends AppCompatActivity {
         progressBar.setVisibility(View.GONE);
     }
 
+    // To remove LoginActivity from the stack if user goes back from here
     @Override
-    public void onStart() {
-        super.onStart();
-        auth.addAuthStateListener(authListener);
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+        finish();
+        overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
     }
 
-    @Override
-    public void onStop() {
-        super.onStop();
-        if (authListener != null) {
-            auth.removeAuthStateListener(authListener);
-        }
-    }
+
+    //It will produce a NullPointerException
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        auth.addAuthStateListener(authListener);
+//    }
+//
+//    @Override
+//    public void onStop() {
+//        super.onStop();
+//        if (authListener != null) {
+//            auth.removeAuthStateListener(authListener);
+//        }
+//    }
 }

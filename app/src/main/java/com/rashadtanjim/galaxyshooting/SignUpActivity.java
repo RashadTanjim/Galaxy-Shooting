@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class SignUpActivity extends AppCompatActivity {
 
     private EditText inputEmail, inputPassword;
-    private Button buttonSignIn, buttonSignUp, buttonResetPassword, changeInfo;
+    private Button buttonSignIn, buttonSignUp, buttonResetPassword;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
 
@@ -38,22 +38,15 @@ public class SignUpActivity extends AppCompatActivity {
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        buttonResetPassword = (Button) findViewById(R.id.btn_reset_password);
-        changeInfo = (Button) findViewById(R.id.Change_info);
 
-        changeInfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
-            }
-        });
-
-        buttonResetPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(SignUpActivity.this, ResetPassword.class));
-            }
-        });
+        //No need during SignUp
+//        buttonResetPassword = (Button) findViewById(R.id.btn_reset_password);
+//        buttonResetPassword.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(SignUpActivity.this, ResetPassword.class));
+//            }
+//        });
 
         buttonSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,5 +108,15 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         progressBar.setVisibility(View.GONE);
+    }
+
+    //So that the app doesn't closes when the user presses back from the SignUpActivity
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this,RegistrationActivity.class);
+        startActivity(intent);
+        overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+        finish();
     }
 }

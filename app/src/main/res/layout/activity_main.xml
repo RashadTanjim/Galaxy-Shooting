@@ -7,6 +7,17 @@
     android:background="@drawable/bg_canvas"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/Change_info"
+        android:layout_width="251dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="572dp"
+        android:background="@color/colorSecondary"
+        android:text="Change Your Personal Info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="339dp"
@@ -41,6 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
