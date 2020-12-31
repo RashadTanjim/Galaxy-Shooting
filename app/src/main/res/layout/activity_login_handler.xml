@@ -11,7 +11,6 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@color/btn_login_bg"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="@dimen/activity_horizontal_margin">
@@ -22,7 +21,7 @@
             android:layout_height="294dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="30dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/bplanet1" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -35,8 +34,8 @@
                 android:layout_marginBottom="10dp"
                 android:hint="@string/hint_email"
                 android:inputType="textEmailAddress"
-                android:textColor="@android:color/black"
-                android:textColorHint="@android:color/white" />
+                android:textColor="@color/colorSecondary"
+                android:backgroundTint="@color/colorSecondary"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -50,8 +49,8 @@
                 android:layout_marginBottom="10dp"
                 android:hint="@string/hint_password"
                 android:inputType="textPassword"
-                android:textColor="@android:color/black"
-                android:textColorHint="@android:color/white" />
+                android:textColor="@color/colorSecondary"
+                android:backgroundTint="@color/colorSecondary" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- LoginHandler Button -->
@@ -61,9 +60,10 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
-            android:background="@color/bg_main"
+            android:background="@color/colorSecondary"
             android:text="@string/btn_login"
             android:textColor="@android:color/black" />
+
 
         <Button
             android:id="@+id/btn_reset_password"

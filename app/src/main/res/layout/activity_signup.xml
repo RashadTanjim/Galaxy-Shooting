@@ -35,7 +35,8 @@
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:singleLine="true"
-                android:textColor="@android:color/background_light" />
+                android:textColor="@color/colorSecondary"
+                android:backgroundTint="@color/colorSecondary"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -54,7 +55,8 @@
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:singleLine="true"
-                android:textColor="@android:color/white" />
+                android:textColor="@color/colorSecondary"
+                android:backgroundTint="@color/colorSecondary"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -69,26 +71,17 @@
             android:textColor="@android:color/black"
             android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/Change_info"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
-            android:background="@color/colorSecondary"
-            android:text="@string/Change_info"
-            android:textAllCaps="false"
-            android:textColor="@android:color/black"
-            android:textSize="15dp" />
 
-        <Button
-            android:id="@+id/btn_reset_password"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dip"
-            android:background="@null"
-            android:text="@string/btn_forgot_password"
-            android:textAllCaps="false"
-            android:textColor="@color/black" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_reset_password"-->
+<!--            android:layout_width="fill_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="15dip"-->
+<!--            android:background="@null"-->
+<!--            android:text="@string/btn_forgot_password"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@color/black" />-->
+        <!--This is not needed while Signing up -->
 
         <!-- Link to LoginHandler Screen -->
 

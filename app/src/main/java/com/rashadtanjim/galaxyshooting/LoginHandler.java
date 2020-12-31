@@ -52,6 +52,7 @@ public class LoginHandler extends AppCompatActivity {
         buttonLogin = (Button) findViewById(R.id.btn_login);
         buttonReset = (Button) findViewById(R.id.btn_reset_password);
 
+
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
 
@@ -59,6 +60,7 @@ public class LoginHandler extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginHandler.this, SignUpActivity.class));
+                finish();
             }
         });
 
@@ -117,5 +119,16 @@ public class LoginHandler extends AppCompatActivity {
             }
         });
     }
+
+    //So that the app doesn't closes when the user presses back from the LoginHandler
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this,RegistrationActivity.class);
+        startActivity(intent);
+        finish();
+        overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+    }
+
 }
 
